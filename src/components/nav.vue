@@ -3,15 +3,34 @@
         <router-link to="/" class="logo" tag="div">Liang</router-link>
         <!--PC导航右边部分-->
         <div class="nav_right">
-            <router-link to="/" tag="div">关于我</router-link>
-            <router-link to="/" tag="div">技术笔记</router-link>
-            <router-link to="/" tag="div">二次元</router-link>
+            <!-- <router-link to="/about" tag="div">关于我</router-link>
+            <router-link to="/technote" tag="div">技术笔记</router-link>
+            <router-link to="/anime" tag="div">二次元</router-link> -->
+            <router-link v-for="(item, index) in navList" :to="{ path: item.link }" :key="index" tag="div">{{item.text}}</router-link>
         </div>
     </div>
 </template>
 
 <script>
 export default {
+    data() {
+        return {
+            navList: [
+                {
+                    'link': 'about',
+                    'text': '关于我'
+                },
+                {
+                    'link': 'technote',
+                    'text': '技术笔记'
+                },
+                {
+                    'link': 'anime',
+                    'text': '二次元'
+                }
+            ]
+        }
+    },
     name: 'Nav'
 }
 </script>

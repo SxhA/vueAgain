@@ -3,7 +3,9 @@
         <el-header class="layout_header">
             <Nav />
         </el-header>
-        <el-main>Main</el-main>
+        <el-main>
+            <router-view/>
+        </el-main>
     </el-container>
 </template>
 
