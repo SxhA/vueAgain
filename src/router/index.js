@@ -6,9 +6,11 @@ import About from '../components/view/about'
 import Anime from '../components/view/anime'
 import Technote from '../components/view/technote'
 
+import store from '../store/store'
+
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
     mode: 'history',
     routes: [
         {
@@ -18,25 +20,34 @@ export default new Router({
             children: [
                 {
                     path: '/',
-                    name: 'Name',
+                    name: 'name',
                     component: Home
                 },
                 {
                     path: 'about',
-                    name: 'About',
+                    name: 'about',
                     component: About
                 },
                 {
                     path: 'anime',
-                    name: 'Anime',
+                    name: 'anime',
                     component: Anime
                 },
                 {
                     path: 'technote',
-                    name: 'Technote',
+                    name: 'technote',
                     component: Technote
                 }
             ]
         }
     ]
 })
+
+router.beforeEach((to, from, next) => {
+    store.commit('changNavActive',{
+        navActive: to.name
+    })
+    next()
+})
+
+export default router;

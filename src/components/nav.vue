@@ -6,12 +6,21 @@
             <!-- <router-link to="/about" tag="div">关于我</router-link>
             <router-link to="/technote" tag="div">技术笔记</router-link>
             <router-link to="/anime" tag="div">二次元</router-link> -->
-            <router-link v-for="(item, index) in navList" :to="{ path: item.link }" :key="index" tag="div">{{item.text}}</router-link>
+            <router-link 
+                v-for="(item, index) in navList" 
+                :to="{ path: item.link }" 
+                :key="index" 
+                tag="div"
+                :class="{nav_active: item.link == navActive}"
+            >{{item.text}}
+            </router-link>
         </div>
     </div>
 </template>
 
 <script>
+import {mapState} from 'vuex'
+
 export default {
     data() {
         return {
@@ -31,7 +40,12 @@ export default {
             ]
         }
     },
-    name: 'Nav'
+    name: 'Nav',
+    computed: {
+        ...mapState({
+            navActive: 'navActive'
+        })
+    }
 }
 </script>
 
