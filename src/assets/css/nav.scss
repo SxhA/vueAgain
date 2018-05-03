@@ -1,10 +1,12 @@
 .nav_box{
     height: 100%;
+    color: #969696;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 .logo{
+    color: #409eff;
     cursor: pointer;
     font-size: 2rem;
 }
@@ -16,10 +18,13 @@
         cursor: pointer;
         margin: 0 1.289em;
     }
-    div:hover{
-        border-bottom: 2px solid #34a5da;
+    div:not(.nav_active):hover{
+        color: #34a5da;
     }
 }
-.nav_active{
+.nav_over{
     color: #34a5da;
+}
+.nav_active{
+    color: #242424;
 }

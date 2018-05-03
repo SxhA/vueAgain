@@ -1,3 +1,12 @@
 .layout_header{
-    
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 1px 3px rgba(26,26,26,.1);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99;
+}
+.layout_main{
+    padding: 0;
 }

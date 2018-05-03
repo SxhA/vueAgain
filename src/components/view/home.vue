@@ -1,7 +1,7 @@
 <template>
-    <div>
-        我是首页
-    </div>
+    <section class="home_main">
+        <div class="home_box"></div>
+    </section>
 </template>
 
 <script>

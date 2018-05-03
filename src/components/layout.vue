@@ -3,7 +3,7 @@
         <el-header class="layout_header">
             <Nav />
         </el-header>
-        <el-main>
+        <el-main class="layout_main">
             <router-view/>
         </el-main>
     </el-container>

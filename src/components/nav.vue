@@ -45,7 +45,13 @@ export default {
         ...mapState({
             navActive: 'navActive'
         })
+    },
+    methods: {
+        
     }
+}
+function isClass(element, index, array){
+    return (element == 'nav_active');
 }
 </script>
 
