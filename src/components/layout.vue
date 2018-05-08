@@ -1,21 +1,20 @@
 <template>
-    <el-container>
-        <el-header class="layout_header">
-            <Nav />
-        </el-header>
-        <el-main class="layout_main">
-            <router-view/>
-        </el-main>
-    </el-container>
+    <div class="layout">
+        <router-view></router-view>
+        <Nav />
+        <Footer />
+    </div>
 </template>
 
 <script>
 import Nav from './nav'
+import Footer from './footer'
 
 export default {
     name: 'Layout',
     components: {
-        Nav
+        Nav,
+        Footer
     }
 }
 </script>

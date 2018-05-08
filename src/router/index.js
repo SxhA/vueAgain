@@ -3,8 +3,9 @@ import Router from 'vue-router'
 import Layout from '../components/layout'
 import Home from '../components/view/home'
 import About from '../components/view/about'
-import Anime from '../components/view/anime'
-import Technote from '../components/view/technote'
+import Footeball from '../components/view/football'
+import Stroke from '../components/view/stroke'
+import Cartoon from '../components/view/cartoon'
 
 import store from '../store/store'
 
@@ -17,37 +18,42 @@ const router = new Router({
             path: '/',
             name: 'Layout',
             component: Layout,
-            children: [
+            children:[
                 {
-                    path: '/',
+                    path: 'home',
                     name: 'home',
                     component: Home
+                },
+                {
+                    path: 'football',
+                    name: 'football',
+                    component: Footeball
+                },
+                {
+                    path: 'stroke',
+                    name: 'stroke',
+                    component: Stroke
+                },
+                {
+                    path: 'cartoon',
+                    name: 'cartoon',
+                    component: Cartoon
                 },
                 {
                     path: 'about',
                     name: 'about',
                     component: About
-                },
-                {
-                    path: 'anime',
-                    name: 'anime',
-                    component: Anime
-                },
-                {
-                    path: 'technote',
-                    name: 'technote',
-                    component: Technote
                 }
             ]
         }
     ]
 })
 
-router.beforeEach((to, from, next) => {
-    store.commit('changNavActive',{
-        navActive: to.name
-    })
-    next()
-})
+// router.beforeEach((to, from, next) => {
+//     store.commit('changNavActive',{
+//         navActive: to.name
+//     })
+//     next()
+// })
 
 export default router;

@@ -1,30 +1,26 @@
 .nav_box{
-    height: 100%;
-    color: #969696;
+    width: 100%;
+    height: px2rem(80);
+    padding: 0 px2rem(18);
+    box-sizing: border-box;
+    border-bottom: 1px solid #313131;
+    position: fixed;
+    left: 0;
+    top: 0;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-}
-.logo{
-    color: #409eff;
-    cursor: pointer;
-    font-size: 2rem;
-}
-.nav_right{
-    height: 100%;
-    display: flex;
     align-items: center;
-    div{
-        cursor: pointer;
-        margin: 0 1.289em;
-    }
-    div:not(.nav_active):hover{
-        color: #34a5da;
+    input{
+        width: px2rem(570);
+        height: px2rem(50);
+        background: #2e2e2e;
+        border-radius: px2rem(6);
     }
 }
-.nav_over{
-    color: #34a5da;
-}
-.nav_active{
-    color: #242424;
+.nav_search_box{
+    color: #4280e1;
+    font-size: px2rem(28);
+    i{
+        font-size: 100%;
+    }
 }

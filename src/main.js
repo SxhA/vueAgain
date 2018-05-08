@@ -9,6 +9,7 @@ import router from './router'
 import store from './store/store'
 
 //引入css样式
+import '@/assets/css/iconfont/iconfont.css'
 import './assets/css/app.scss'
 
 Vue.use(ElementUI);
@@ -20,5 +21,27 @@ new Vue({
     router,
     store,
     components: { App },
-    template: '<App/>'
+    template: '<App/>',
+    data () {
+        return {
+            clientHeight: ''
+        }
+    },
+    mounted: function () {
+        //html字体大小恒等于屏幕宽度的1%，这样1rem=1%
+        //document.documentElement.style.fontSize = document.documentElement.clientWidth / 100 + 'px'; 
+        //window.addEventListener("orientationchange", setRem);
+        //window.addEventListener("resize", setRem);
+        setRem()
+        window.onresize = function(){
+            setRem()
+            //document.documentElement.style.fontSize = document.documentElement.clientWidth / 100 + 'px'; 
+        }
+    }
 })
+
+function setRem() {
+    var html = document.querySelector("html");
+    var width = html.getBoundingClientRect().width;
+    html.style.fontSize = width / 15 + "px";
+}

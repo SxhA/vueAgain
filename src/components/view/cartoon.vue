@@ -1,12 +1,12 @@
 <template>
     <div>
-        二次元
+        cartoon
     </div>
 </template>
 
 <script>
 export default {
-    name: 'Anime'
+
 }
 </script>
 
