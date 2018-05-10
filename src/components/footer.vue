@@ -41,7 +41,7 @@ export default {
                 },
                 {
                     text: '足球',
-                    link: 'shenhua',
+                    link: 'football',
                     icon: 'icon-iosfootball'
                 },
                 {
@@ -55,13 +55,18 @@ export default {
                     icon: 'icon-cartoon'
                 },
                 {
-                    text: '介绍',
-                    link: 'about',
-                    icon: 'icon-me2'
+                    text: '随笔',
+                    link: 'note',
+                    icon: 'icon-notetext'
                 }
             ]
         }
     },
+    computed: {
+        ...mapState({
+            footerActive: 'footerActive'
+        })
+    }
 }
 </script>
 

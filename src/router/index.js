@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Layout from '../components/layout'
 import Home from '../components/view/home'
-import About from '../components/view/about'
+import Note from '../components/view/note'
 import Footeball from '../components/view/football'
 import Stroke from '../components/view/stroke'
 import Cartoon from '../components/view/cartoon'
@@ -40,9 +40,9 @@ const router = new Router({
                     component: Cartoon
                 },
                 {
-                    path: 'about',
-                    name: 'about',
-                    component: About
+                    path: 'note',
+                    name: 'note',
+                    component: Note
                 }
             ]
         }
@@ -50,8 +50,8 @@ const router = new Router({
 })
 
 // router.beforeEach((to, from, next) => {
-//     store.commit('changNavActive',{
-//         navActive: to.name
+//     store.commit('changFooterActive',{
+//         footerActive: to.name
 //     })
 //     next()
 // })

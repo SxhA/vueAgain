@@ -5,11 +5,11 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
     state: {
-        navActive: ''
+        footerActive: ''
     },
     mutations: {
-        changNavActive(state, payload){
-            state.navActive = payload.navActive
+        changFooterActive(state, payload){
+            state.footerActive = payload.changFooterActive
         }
     },
     actions: {

@@ -1,23 +1,28 @@
 <template>
     <section class="home_main">
-        <div class="home_box">
-            <p>
-                大娃是则5ZP<br />
-                大娃是则5ZP<br />
-                大娃是则5ZP<br />
-                大娃是则5ZP<br />
-                大娃是则5ZP<br />
-                大娃是则5ZP<br />
-                大娃是则5ZP<br />
-                大娃是则5ZP<br />
-            </p>
+        <div class="home_nav">
+            <div>
+                前端
+            </div>
+            <div>
+                后端
+            </div>
+            <div>
+                其他
+            </div>
+            <section></section>
         </div>
     </section>
 </template>
 
 <script>
+import 'swiper/dist/css/swiper.css'
+import { swiper, swiperSlide } from 'vue-awesome-swiper'
 export default {
-    name: 'Home'
+    components: {
+        swiper,
+        swiperSlide
+    }
 }
 </script>
 
