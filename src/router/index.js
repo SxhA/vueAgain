@@ -6,6 +6,9 @@ import Note from '../components/view/note'
 import Footeball from '../components/view/football'
 import Stroke from '../components/view/stroke'
 import Cartoon from '../components/view/cartoon'
+import Fontend from '../components/view/fontend'
+import Backend from '../components/view/backend'
+import Other from '../components/view/other'
 
 import store from '../store/store'
 
@@ -21,8 +24,24 @@ const router = new Router({
             children:[
                 {
                     path: 'home',
-                    name: 'home',
-                    component: Home
+                    component: Home,
+                    children: [
+                        {
+                            path: '',//这样写成空就代表Fontend为home的子路由，/home/fontend
+                            name: 'home',//Fontend是home的默认子路由，所以name: 'home'写在这里
+                            component: Fontend
+                        },
+                        {
+                            path: 'backend',
+                            name: 'backend',
+                            component: Backend
+                        },
+                        {
+                            path: 'other',
+                            name: 'other',
+                            component: Other
+                        },
+                    ]
                 },
                 {
                     path: 'football',

@@ -1,13 +1,19 @@
 .home_main{
     padding-top: px2rem(80);
+    position: relative;
 }
 .home_nav{
     width: 100%;
     height: px2rem(64);
     display: flex;
     border-bottom: 1px solid #313131;
-    position: relative;
-    div{
+    position: fixed;
+    left: 0;
+    top: px2rem(80);
+    .innerDiv{
+        display: flex;
+    }
+    .home_link{
         width: 33.33333%;
         height: 100%;
         line-height: px2rem(64);
@@ -16,6 +22,9 @@
         font-weight: bold;
         color: #565656;
     }
+    .router-link-active{
+        color: #828282;
+    }
     section{
         width: 33.33333%;
         height: 2px;
@@ -23,5 +32,33 @@
         position: absolute;
         left: 0;
         bottom: 0;
+        transition: all 1s ease;
+        -webkit-transition: all .5s ease;
+    }
+}
+.line_movea{
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+}
+.line_moveb{
+    transform: translateX(33vw);
+    -webkit-transform: translateX(33vw);
+}
+.line_movec{
+    transform: translateX(66vw);
+    -webkit-transform: translateX(66vw);
+}
+.home_view{
+    width: 100%;
+    padding-top: px2rem(64);/*.home_nav的高度，要把内容撑到它下面显示*/
+    box-sizing: border-box;
+    .v-enter{
+        opacity: 0;
+    }
+    .v-enter-to{
+        opacity: 1;
+    }
+    .v-enter-active{
+        transition: 2s;
     }
 }

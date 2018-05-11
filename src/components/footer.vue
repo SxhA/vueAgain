@@ -36,27 +36,27 @@ export default {
             footerList: [
                 {
                     text: '首页',
-                    link: 'home',
+                    link: '/home',
                     icon: 'icon-homefill'
                 },
                 {
                     text: '足球',
-                    link: 'football',
+                    link: '/football',
                     icon: 'icon-iosfootball'
                 },
                 {
                     text: '行程',
-                    link: 'stroke',
+                    link: '/stroke',
                     icon: 'icon-stroke'
                 },
                 {
                     text: '动漫',
-                    link: 'cartoon',
+                    link: '/cartoon',
                     icon: 'icon-cartoon'
                 },
                 {
                     text: '随笔',
-                    link: 'note',
+                    link: '/note',
                     icon: 'icon-notetext'
                 }
             ]

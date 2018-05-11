@@ -8,6 +8,9 @@ import router from './router'
 // 导入vuex
 import store from './store/store'
 
+//导入jquery
+import $ from 'jquery'
+
 //引入css样式
 import '@/assets/css/iconfont/iconfont.css'
 import './assets/css/app.scss'
