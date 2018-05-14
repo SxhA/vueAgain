@@ -2,33 +2,31 @@
     <section class="home_main">
         <div class="home_nav">
             <div class="innerDiv">
-                <router-link to="/home" class="home_link" exact tag="div" @click.native="moveLine($event, 0)">
+                <router-link to="/home" class="home_link" exact tag="div" @click.native="moveLine(0)">
                     前端
                 </router-link>
-                <router-link to="/home/backend" class="home_link" tag="div" @click.native="moveLine($event, 1)">
+                <router-link to="/home/backend" class="home_link" tag="div" @click.native="moveLine(1)">
                     后端
                 </router-link>
-                <router-link to="/home/other" class="home_link" tag="div" @click.native="moveLine($event, 2)">
+                <router-link to="/home/other" class="home_link" tag="div" @click.native="moveLine(2)">
                     其他
                 </router-link>
                 <section :class="{line_movea: tabA, line_moveb: tabB, line_movec: tabC}"></section><!--导航下方移动的线-->
             </div>
         </div>
         <div class="home_view">
-            <transition>
-                <router-view></router-view>
-            </transition>
+            <router-view></router-view>
         </div>
     </section>
 </template>
 
 <script>
-import 'swiper/dist/css/swiper.css'
-import { swiper, swiperSlide } from 'vue-awesome-swiper'
+// import 'swiper/dist/css/swiper.css'
+// import { swiper, swiperSlide } from 'vue-awesome-swiper'
 export default {
     components: {
-        swiper,
-        swiperSlide
+        // swiper,
+        // swiperSlide
     },
     data (){
         return {
@@ -43,7 +41,7 @@ export default {
         $('.home_view').css('min-height',minHeight);
     },
     methods: {
-        moveLine: function(e, num){
+        moveLine: function(num){
             switch (num){
                 case 0:
                     this.tabA = true

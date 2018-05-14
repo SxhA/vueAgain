@@ -1,0 +1,40 @@
+.football_main{
+    padding-top: px2rem(80);
+}
+.football_box{
+    width: 100%;
+    h1{
+        font-size: px2rem(40);
+        color: #fff;
+        text-align: center;
+        padding: px2rem(20) 0;
+        border-bottom: 1px solid #fff;
+    }
+}
+.football_list{
+    width: 100%;
+    li{
+        padding: px2rem(30) px2rem(40);
+        border-bottom: 1px dashed #828282;
+    }
+    p{
+        font-size: px2rem(30);
+        font-weight: bold;
+        color: #828282;
+        text-align: center
+    }
+}
+.football_datail{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .football_img{
+        width: px2rem(80);
+        height: px2rem(80);
+    }
+    span{
+        font-size: px2rem(30);
+        font-weight: bold;
+        color: #828282;
+    }
+}
