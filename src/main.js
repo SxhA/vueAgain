@@ -18,6 +18,15 @@ import './assets/css/app.scss'
 Vue.use(ElementUI);
 Vue.config.productionTip = false
 
+//引入vue-amap，饿了么的高德地图组件
+import VueAMap from 'vue-amap'
+Vue.use(VueAMap);
+VueAMap.initAMapApiLoader({
+  key: 'cf412a7204a96fe1e5574284a410124b',
+  plugin: ['AMap.Autocomplete', 'AMap.PlaceSearch', 'AMap.Scale', 'AMap.OverView', 'AMap.ToolBar', 'AMap.MapType', 'AMap.PolyEditor', 'AMap.CircleEditor'],
+  uiVersion: '1.0.11'
+});
+
 /* eslint-disable no-new */
 new Vue({
     el: '#app',

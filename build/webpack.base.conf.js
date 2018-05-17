@@ -76,9 +76,6 @@ module.exports = {
             "window.jQuery": "jquery"
         })
     ],
-    externals: {
-        'AMap': 'AMap'
-    },
     node: {
         // prevent webpack from injecting useless setImmediate polyfill because Vue
         // source contains it (although only uses it if it's native).
